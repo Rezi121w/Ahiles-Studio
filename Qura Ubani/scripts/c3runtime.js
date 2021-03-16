@@ -3008,7 +3008,9 @@ value:this.WaveFunc(this._i)*this._mag}]}]}}};
 		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.Keyboard.Cnds.OnKey,
-		C3.Plugins.System.Cnds.Every
+		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.System.Cnds.CompareVar
 		];
 	};
 	self.C3_JsPropNameTable = [
@@ -3071,7 +3073,8 @@ value:this.WaveFunc(this._i)*this._mag}]}]}}};
 		{download: 0},
 		{Keyboard: 0},
 		{PlayButton: 0},
-		{Game: 0}
+		{Game: 0},
+		{Key: 0}
 	];
 }
 

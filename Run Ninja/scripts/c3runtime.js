@@ -2934,12 +2934,12 @@ const map=new WeakMap;self.IBulletBehaviorInstance=class IBulletBehaviorInstance
 		C3.Behaviors.Bullet,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Behaviors.Platform.Cnds.IsEnabled,
-		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Plugins.System.Cnds.CompareVar,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.System.Cnds.Every,
-		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Behaviors.Platform.Acts.SetEnabled,
@@ -2985,7 +2985,10 @@ const map=new WeakMap;self.IBulletBehaviorInstance=class IBulletBehaviorInstance
 		{Start: 0},
 		{KnifeText: 0},
 		{Text2: 0},
-		{t: 0}
+		{E: 0},
+		{Jump: 0},
+		{t: 0},
+		{touch: 0}
 	];
 }
 
@@ -3087,8 +3090,8 @@ const map=new WeakMap;self.IBulletBehaviorInstance=class IBulletBehaviorInstance
 	}
 
 	self.C3_ExpressionFuncs = [
-		() => "Animation 1",
 		() => 1,
+		() => "Animation 1",
 		() => 0,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -3135,7 +3138,6 @@ const map=new WeakMap;self.IBulletBehaviorInstance=class IBulletBehaviorInstance
 			return () => n0.ExpObject();
 		},
 		() => 224,
-		() => "Animation 4",
 		() => 20,
 		p => {
 			const n0 = p._GetNode(0);
